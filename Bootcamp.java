@@ -384,16 +384,3 @@ public class Bootcamp{
     }
 }
 */
-import java.util.Scanner;
-import java.util.Arrays;
-public class Bootcamp{
-    public static void bubblesort(int[] arr){
-
-    }
-    public static void insertionsort(int[] arr){
-
-    }
-    public static void selectionsort(int[] arr){
-        
-    }
-}
