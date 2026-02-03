@@ -2,7 +2,7 @@
 // Linear search :
 import java.util.Scanner;
 import java.util.Arrays;
-public class Bootcamp{
+public class DS_search{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the length of the array : ");
@@ -36,7 +36,7 @@ public class Bootcamp{
 // Binary Search : 
 import java.util.Scanner;
 import java.util.Arrays;
-public class Bootcamp{
+public class DS_search{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the length of the array : ");
@@ -76,7 +76,7 @@ public class Bootcamp{
 // Fibonacci search
 import java.util.Scanner;
 import java.util.Arrays;
-public class Bootcamp{
+public class DS_search{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the length of the array : ");
@@ -101,7 +101,9 @@ public class Bootcamp{
         int n = arr.length;
         int fnminus1 = 0;
         int fnminus2 = 1;
-        int fn = fnminus1 = fnminus2;
+        int fn;
+        int fnminus1;
+        int fnminus2;
         while(fn < n){
             fnminus2 = fnminus1;
             fnminus1 = fn;
@@ -132,7 +134,7 @@ public class Bootcamp{
 // Uniform Birnary search : 
 import java.util.Scanner;
 import java.util.Arrays;
-public class Bootcamp{
+public class DS_search{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the length of the array : ");
@@ -179,7 +181,7 @@ public class Bootcamp{
 // Interpolation search :
 import java.util.Scanner;
 import java.util.Arrays;
-public class Bootcamp{
+public class DS_search{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the length of the array : ");
