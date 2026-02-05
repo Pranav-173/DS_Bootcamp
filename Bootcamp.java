@@ -558,6 +558,7 @@ public class Bootcamp{
     }
 }
 *//*
+// Stack:
 import java.util.Scanner;
 public class Bootcamp {
 	static int MAX_SIZE = 100;
@@ -845,6 +846,520 @@ public class Bootcamp{
 		} 
         while (choice != 7);
 		sc.close();
+    }
+}
+*//*
+// Linked Lists :
+import java.util.Scanner;
+class Node {
+    int data;
+    Node next;
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class Singlylinkedlist {
+    private Node head;
+    public void insertAtBeginning(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
+    public void insertAtPosition(int data, int position) {
+        if (position < 1) {
+            System.out.println("Invalid position!");
+            return;
+        }
+        if (position == 1) {
+            insertAtBeginning(data);
+            return;
+        }
+        Node newNode = new Node(data);
+        Node temp = head;
+        for (int i = 1; i < position - 1 && temp != null; i++) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            System.out.println("Position out of range!");
+            return;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+    public void deleteFromBeginning() {
+        if (head == null) {
+            System.out.println("List is empty!");
+            return;
+        }
+        head = head.next;
+    }
+    public void deleteFromEnd() {
+        if (head == null) {
+            System.out.println("List is empty!");
+            return;
+        }
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+    public void deleteFromPosition(int position) {
+        if (head == null) {
+            System.out.println("List is empty!");
+            return;
+        }
+        if (position < 1) {
+            System.out.println("Invalid position!");
+            return;
+        }
+        if (position == 1) {
+            deleteFromBeginning();
+            return;
+        }
+        Node temp = head;
+        for (int i = 1; i < position - 1 && temp != null; i++) {
+            temp = temp.next;
+        }
+        if (temp == null || temp.next == null) {
+            System.out.println("Position out of range!");
+            return;
+        }
+        temp.next = temp.next.next;
+    }
+    public void search(int key) {
+        Node temp = head;
+        int position = 1;
+        while (temp != null) {
+            if (temp.data == key) {
+                System.out.println("Element " + key + " found at position: " + position);
+                return;
+            }
+            temp = temp.next;
+            position++;
+        }
+        System.out.println("Element " + key + " not found!");
+    }
+    public void display() {
+        if (head == null) {
+            System.out.println("List is empty!");
+            return;
+        }
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+}
+public class Bootcamp {
+    public static void main(String[] args) {
+        Singlylinkedlist list = new Singlylinkedlist();
+        Scanner sc = new Scanner(System.in);
+        int choice, data, position;
+        do {
+            System.out.println("\n----- Linked List Operations Menu -----");
+            System.out.println("1. Insert at Beginning");
+            System.out.println("2. Insert at End");
+            System.out.println("3. Insert at Position");
+            System.out.println("4. Delete from Beginning");
+            System.out.println("5. Delete from End");
+            System.out.println("6. Delete from Position");
+            System.out.println("7. Search");
+            System.out.println("8. Display");
+            System.out.println("9. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter element to insert at beginning: ");
+                    data = sc.nextInt();
+                    list.insertAtBeginning(data);
+                    break;
+                case 2:
+                    System.out.print("Enter element to insert at end: ");
+                    data = sc.nextInt();
+                    list.insertAtEnd(data);
+                    break;
+                case 3:
+                    System.out.print("Enter element to insert: ");
+                    data = sc.nextInt();
+                    System.out.print("Enter the position: ");
+                    position = sc.nextInt();
+                    list.insertAtPosition(data, position);
+                    break;
+                case 4:
+                    list.deleteFromBeginning();
+                    break;
+                case 5:
+                    list.deleteFromEnd();
+                    break;
+                case 6:
+                    System.out.print("Enter the position: ");
+                    position = sc.nextInt();
+                    list.deleteFromPosition(position);
+                    break;
+                case 7:
+                    System.out.print("Enter element to search: ");
+                    data = sc.nextInt();
+                    list.search(data);
+                    break;
+                case 8:
+                    list.display();
+                    break;
+                case 9:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice!!");
+            }
+        } while (choice != 9);
+        sc.close();
+    }
+}
+*//*
+// Circular Linked Lists:
+import java.util.Scanner;
+class Node {
+    int data;
+    Node next;
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class circularlinkedlist {
+    private Node tail;
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+        if (tail == null) {
+            tail = newNode;
+            tail.next = tail;
+        } else {
+            newNode.next = tail.next;
+            tail.next = newNode;
+            tail = newNode;
+        }
+        System.out.println(data + " inserted at the end");
+    }
+    public void insertAtBeginning(int data) {
+        Node newNode = new Node(data);
+        if (tail == null) {
+            tail = newNode;
+            tail.next = tail;
+        } else {
+            newNode.next = tail.next;
+            tail.next = newNode;
+        }
+        System.out.println(data + " inserted at the beginning");
+    }
+    public void deleteFromBeginning() {
+        if (tail == null) {
+            System.out.println("List is empty. Can't delete");
+            return;
+        }
+        Node head = tail.next;
+        if (head == tail) {
+            System.out.println(head.data +" deleted from beginning.");
+            tail = null;
+        } else {
+            System.out.println(head.data + " deleted from beginning");
+            tail.next = head.next;
+        }
+    }
+    public void deleteFromEnd(){
+        if (tail == null) {
+            System.out.println("List is empty. Can't delete");
+            return;
+        }
+        System.out.println("Circular linked list.");
+        Node temp = tail.next;
+        do{
+            System.out.println(temp.data +" ");
+            temp = temp.next;
+        }while(temp != tail.next);
+        System.out.println();
+        if(temp == tail){
+            System.out.println(temp.data +" is deleted");
+            tail = null;
+        }
+        else{
+            while(temp.next != tail){
+                temp = temp.next;
+            }
+            System.out.println(tail.data +" is deleted");
+            temp.next = tail.next;
+            tail = temp;
+        }
+    }
+    public void display(){
+        if (tail == null) {
+            System.out.println("List is empty!");
+            return;
+        }
+        Node temp = tail.next; 
+        do {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        } while (temp != tail.next); 
+        System.out.println("null");
+    }
+    public void search(int key){
+        if (tail == null) {
+            System.out.println("List is empty!");
+            return;
+        }
+        Node temp = tail.next;
+        do{
+            if(temp.data == key){
+                System.out.println("Element " + key + " found ");
+                return;
+            }
+        }
+        while (temp != tail.next);
+        System.out.println("Element " + key + " not found!");
+    }
+}
+public class CircularLinkedLists {
+    public static void main(String[] args) {
+        circularlinkedlist cll = new circularlinkedlist();
+        Scanner sc = new Scanner(System.in);
+        int choice, data, position;
+        do {
+            System.out.println("\n-----Circular Linked List Operations Menu -----");
+            System.out.println("1. Insert at Beginning");
+            System.out.println("2. Insert at End");
+            System.out.println("3. Delete from Beginning");
+            System.out.println("4. Delete from End");
+            System.out.println("5. Search");
+            System.out.println("6. Display");
+            System.out.println("7. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter element to insert at beginning: ");
+                    int frontdata = sc.nextInt();
+                    cll.insertAtBeginning(frontdata);
+                    break;
+                case 2:
+                    System.out.print("Enter element to insert at end: ");
+                    int enddata = sc.nextInt();
+                    cll.insertAtEnd(enddata);
+                    break;
+                case 3:
+                    cll.deleteFromBeginning();
+                    break;
+                case 4:
+                    cll.deleteFromEnd();
+                    break;
+                case 5:
+                    System.out.print("Enter element to search: ");
+                    int key = sc.nextInt();
+                    cll.search(key);
+                    break;
+                case 6:
+                    cll.display();
+                    break;
+                case 7:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice!!");
+            }
+        } while (choice != 7);
+        sc.close();
+    }
+}
+*//*
+//Double Linked List:
+import java.util.Scanner;
+class Node{
+    int data;
+    Node prev;
+    Node next;
+    Node(int data){
+        this.data = data;
+        this.prev = null;
+        this.next = null;
+    }
+}
+class doublylinkedlist{
+    private Node head;
+    public void insertAtBeginning(int data){
+        Node newNode = new Node(data);
+        if(head == null){
+            head = newNode;
+        }
+        else{
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        System.out.println(data +" inserted from beginning");
+    }
+    public void insertAtEnd(int data){
+        Node newNode = new Node(data);
+        if(head == null){
+            head = newNode;
+            System.out.println(data +" inserted at the end");
+            return;
+        }
+        Node temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        newNode.prev = temp;
+        System.out.println(data +" inserted at the end");
+    }
+    public void deleteFromBeginning(){
+        if(head == null){
+            System.out.println("The List is empty. Can't delete element");
+            return;
+        }
+        System.out.println(head.data +" deleted from front");
+        head = head.next;
+        if(head != null){
+            head.prev = null;
+        }
+    }
+    public void deleteFromEnd(){
+        if(head == null){
+            System.out.println("The List is empty. Can't delete element");
+            return;
+        }
+        if(head.next == null){
+            System.out.println(head.data +" deleted from end");
+            head = null;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        System.out.println(temp.data +" deleted from end");
+        temp.prev.next = null;
+    }
+    public void search(int key){
+        if(head == null){
+            System.out.println("List is empty!!");
+            return;
+        }
+        Node temp = head;
+        int pos = 1;
+        while (temp != null) {
+            if (temp.data == key) {
+                System.out.println(key + " found at position " + pos);
+                return;
+            }
+            temp = temp.next;
+            pos++;
+        }
+        System.out.println(key + " not found in the list");
+
+    }
+    public void displayforward(){
+        if(head == null){
+            System.out.println("List is empty!!");
+            return;
+        }
+        Node temp = head;
+        System.out.println("Forward Traversal : ");
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+    public void displaybackward(){
+        if(head == null){
+            System.out.println("List is empty!!");
+            return;
+        }
+        Node temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        System.out.println("Backward Traversal : ");
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.prev;
+        }
+        System.out.println("null");
+    }
+}
+public class DoubleLinkedList{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        doublylinkedlist dll = new doublylinkedlist();
+        int choice, data, position;
+        do {
+            System.out.println("\n----- Linked List Operations Menu -----");
+            System.out.println("1. Insert at Beginning");
+            System.out.println("2. Insert at End");
+            System.out.println("3. Delete from Beginning");
+            System.out.println("4. Delete from End");
+            System.out.println("5. Search");
+            System.out.println("6. Display forward direction");
+            System.out.println("7. Display backward direction");
+            System.out.println("8. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter element to insert at beginning: ");
+                    data = sc.nextInt();
+                    dll.insertAtBeginning(data);
+                    break;
+                case 2:
+                    System.out.print("Enter element to insert at end: ");
+                    data = sc.nextInt();
+                    dll.insertAtEnd(data);
+                    break;
+                case 3:
+                    dll.deleteFromBeginning();
+                    break;
+                case 4:
+                    dll.deleteFromEnd();
+                    break;
+                case 5:
+                    System.out.print("Enter element to search: ");
+                    data = sc.nextInt();
+                    dll.search(data);
+                    break;
+                case 6:
+                    dll.displayforward();
+                    break;
+                case 7:
+                    dll.displaybackward();
+                    break;
+                case 8:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice!!");
+            }
+        } while (choice != 8);
+        sc.close();
     }
 }
 */
