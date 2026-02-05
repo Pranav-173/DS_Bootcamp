@@ -1,11 +1,4 @@
-/*
-//Queue : A queue is a linear data structure that follows first-in first-out principle. 
-> Enqueue: Adds a new element to the queue.
-> Dequeue: Removes and returns the first (front) element from the queue.
-> Peek: Returns the first element in the queue.
-> isEmpty: Checks if the queue is empty.
-> Size: Finds the number of elements in the queue.
-*/
+//Circular Queue:
 import java.util.Scanner;
 class Queue{
     private int[] arr;
@@ -25,7 +18,8 @@ class Queue{
             System.out.println("Queue is full. Can't enqueue "+ item);
             return;
         }
-        arr[++rear] = item;
+        rear = (rear + 1) % capacity;
+        arr[rear] = item;
         count++;
         System.out.println(item +" enqueued to queue.");
     }
@@ -34,7 +28,8 @@ class Queue{
             System.out.println("Queue is empty.Can't dequeue.");
             return;
         }
-        int item = arr[front++];
+        int item = arr[front];
+        front = (front + 1) % capacity;
         count--;
         System.out.println(item +" dequeued from queue.");
     }
@@ -51,10 +46,11 @@ class Queue{
             return;
         }
         System.out.println("Queue Elements : ");
-        for (int i = front; i <= rear; i++) {
-        System.out.print(arr[i] + " ");
-        System.out.println();
+        for(int i = 0; i < count; i++){
+            int index = (front + i) % capacity;
+            System.out.println(arr[index] + " ");
         }
+        System.out.println();
     }
     public boolean isEmpty(){
         return count == 0;
@@ -62,6 +58,8 @@ class Queue{
     public boolean isFull(){
         return count == capacity;
     }
+}
+public class DS_circularqueue{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter queue size : ");
