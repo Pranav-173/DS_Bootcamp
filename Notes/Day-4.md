@@ -23,11 +23,11 @@
 	Since it uses the principle of in place sorting, it requires zero extra space.
 	
 4.  **Code:**
-`public class BubbleSort {
+```
+public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         int n = arr.length; // use .length (no parentheses)
-        boolean swapped;`
-
+        boolean swapped;
         for (int i = 0; i < n - 1; i++) {
             swapped = false;
             for (int j = 0; j < n - 1 - i; j++) {
@@ -63,7 +63,8 @@
         System.out.print("After:  ");
         printArray(arr);
     }
-`}`
+}
+```
 
 # **Insertion Sort:**
 It is a simple and intuitive sorting algorithm that builds the sorted array one element at a time. it works by repeatedly taking the next element and inserting it into the correct position in the already sorted part of the array.
