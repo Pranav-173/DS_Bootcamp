@@ -58,7 +58,8 @@
 1. **In-order Traversal**: l, R, r
 2. **Pre-order Traversal**: R, l, r
 3. **Post-order Traversal**: l, r, R
+```
 R -> Root
 l -> Left
 r -> Right
-
+```
