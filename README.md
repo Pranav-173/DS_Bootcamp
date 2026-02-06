@@ -21,7 +21,7 @@ This directory contains implementations of fundamental data structures in Java, 
 - Circular Linked Lists
 - Stacks
 - Queues
-- Biary Tree
+- Binary Tree
 
 Each implementation focuses on:
 - Correct pointer manipulation
