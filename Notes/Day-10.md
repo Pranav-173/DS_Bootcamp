@@ -19,6 +19,7 @@
 					   |
 					(Sub-Tree)
 
+---
 **Basic Terminology:**
 	1. **Path:**
 		It refers to the sequence of nodes along the edges of a tree.
@@ -54,3 +55,10 @@ These are three main types of trees:
 			It is a binary tree where all the leaf nodes must be on the same level. However, root and internal nodes in a complete binary tree can have 0, 1 or 2 child nodes.
 		3. **Perfect Binary Tree:**
 			It is a binary tree where all the leaf node are on the same level and every node except leaf node has 2 children.
+
+**In-order Traversal**: l, R, r
+**Pre-order Traversal**: R, l, r
+**Post-order Traversal**: l, r, R
+R -> Root
+l -> Left
+r -> Right
