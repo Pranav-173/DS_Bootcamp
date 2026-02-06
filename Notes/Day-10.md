@@ -52,12 +52,12 @@
 				A full binary tree is a binary tree where every node has either 0 or 2 child nodes.
 		2. **Complete Binary Tree:**
 				It is a binary tree where all the leaf nodes must be on the same level. However, root and internal nodes in a complete binary tree can have 0, 						1 or 2 child nodes.
-			3. **Perfect Binary Tree:**
+		3. **Perfect Binary Tree:**
 				It is a binary tree where all the leaf node are on the same level and every node except leaf node has 2 children.
 
-**In-order Traversal**: l, R, r
-**Pre-order Traversal**: R, l, r
-**Post-order Traversal**: l, r, R
+1. **In-order Traversal**: l, R, r
+2. **Pre-order Traversal**: R, l, r
+3. **Post-order Traversal**: l, r, R
 R -> Root
 l -> Left
 r -> Right
