@@ -1,4 +1,4 @@
-# Circular Linked List
+# Circular Linked List:
 **A circular linked list is a variation of a linked list where the last node is connected or points back to the first node instead of null. Forming a circle. It can either be singly linked or doubly linked.**
 
 `Eg:`
