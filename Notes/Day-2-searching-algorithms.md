@@ -147,7 +147,7 @@ This approach allows us to:
 2. Compare algorithms based on their scalability and efficiency.
 3. Understand the upper and lower bounds of algorithm performance.
 
-Types of Asymptotic Notations
+**Types of Asymptotic Notations:**
 
 Asymptotic notations provide a formal way to describe the growth rates of functions representing an algorithm’s time or space complexity. The main asymptotic notations are:
 
@@ -159,17 +159,17 @@ Asymptotic notations provide a formal way to describe the growth rates of functi
 
 **little-o Notation (o)** - Describes a strict upper bound: `f(n) = o(g(n))` means f grows strictly slower than `g` (for any constant `c > 0`, eventually `f(n) < c·g(n)`).
 
-**Space Complexity**  
+**Space Complexity:**  
 Space complexity refers to the amount of memory (space) an algorithm needs to run to completion. It includes all memory and its usage during execution, including variables, data structures, function calls, and temporary storage.
 
-**Types of Memory Used**
+**Types of Memory Used:**
 
 1. **Instruction space** - Memory required to store the compiled version of the program (code).
 2. **Activation stack / Call stack** - Space required for function calls: parameters, return addresses, and local variables.
 3. **Heap** - Dynamically allocated memory during runtime (objects, dynamic arrays, etc.).
 4. **Input/Output data space** - Space required to store input and output data buffers.
 
-**Common Space Complexities**
+**Common Space Complexities:**
 1. **O(1)** - Constant space: the algorithm uses a fixed amount of extra memory regardless of input size.
 2. **O(n)** - Linear space: auxiliary memory used grows proportionally with input size.
 3. **O(n²)** - Quadratic space: used by algorithms that store 2D structures or pairwise data (e.g., some matrix or naive graph algorithms).
