@@ -1,57 +1,102 @@
-**--followed from DSA notes--**
+# **Sorting techniques:**  
+Sorting is a fundamental topic in computer science that arranges the elements of a dataset in a specific order, usually ascending or descending. Sorted data enables efficient searching, merging, and analysis, and sorting is a prerequisite for many algorithms. Choosing a sorting technique depends on factors such as:
 
-# **Bubble Sort:**
-	It is one of the simplest sorting algorithms. It works by repeatedly swapping the adjacent elements if they are in the wrong order. this process is repeated until the list is sorted.
-	
-1. **Algorithm Description:**
-	Given an array of n no. of elements, the algorithm performs the following steps:
-	
-	1) Compare each pair of adjacent elements.
-	2) if the current element is greater than the next element swap them.
-	3) After each pass, the largest is sorted or "Bubbles up".
-	4) it is repeated until the all elements are sorted.
-	
-2. **Time Complexity:**
-	1) Best Case: O(1) - array is already sorted.
-	2) Average Case: O(n^2).
-	3) Worst Case: O(n^2) - array is in reverse order.
-	
-3. **Space Complexity:**
-	Since it uses the principle of in place sorting, it requires zero extra space.
+- **Size of the dataset**    
+- **Memory constraints**
+- **Nature of the data** (random, partially sorted, nearly sorted, etc.)
 
-# **Insertion Sort:**
-It is a simple and intuitive sorting algorithm that builds the sorted array one element at a time. it works by repeatedly taking the next element and inserting it into the correct position in the already sorted part of the array.
+**Key terms in sorting**:
+1. **Stable sort**:
+    A sorting algorithm is _stable_ if it preserves the relative order of records with equal keys.  
+    Example: If two students have the same marks, a stable sort will keep them in their original relative order.  
+    Common stable algorithms: **Bubble Sort**, **Merge Sort**, **Insertion Sort**.
+2. **In-place sort**:
+    A sorting algorithm is _in-place_ if it requires only a constant amount of extra memory beyond the input array (i.e., O(1) auxiliary space).  
+    Common in-place algorithms: **Quick Sort**, **Selection Sort**, **Bubble Sort**.
+3. **Adaptive sort**:
+    An _adaptive_ sorting algorithm takes advantage of existing order in the input. The more the input is already sorted, the fewer operations the algorithm needs to perform. Examples of adaptive behavior appear in **Insertion Sort** (fast on nearly-sorted arrays) and some optimized merge or hybrid sorts.
+    **Examples:** Insertion Sort, `TimSort`, Optimized Bubble Sort.
+4. **Comparison-based Sort**:
+    A sorting algorithm is _comparison-based_ if it determines the order of elements by comparing pairs of elements. Typical examples include **Bubble Sort**, **Merge Sort**, **Quick Sort**, and **Heap Sort**.
+5. **Non-comparison Sort**:
+    A sorting algorithm is _non-comparison_ if it does not compare elements pairwise; instead it uses the actual values (or parts of the values) to determine position. Non-comparison sorts typically rely on counting, digit processing, or bucketing. Examples include **Counting Sort**, **Radix Sort**, and **Bucket Sort**.
 
- 1. **Algorithm Description:**
-	1. Start from the second element (index 1), as the first element is considered as sorted.
-	2. Compare the current element with the elements in the sorted position. (to it's left).
-	3. Shift the current element with the elements in the sorted portion that are greater than the current element to the right by one position.
-	4. insert the current element to its current position.
-	
-2. **Time Complexity:**
-	1) Best Case: O(n) - array is already sorted.
-	2) Average Case: O(n^2).
-	3) Worst Case: O(n^2) - array is in reverse order.
-	
-3. **Space Complexity:**
-	Insertion sort has a space complexity of O(1) because it is an in-place sorting algorithm.
+**Summary table (terms & meanings):**
+- **Stable sort:** - Maintains the relative order of equal elements (i.e., equal keys keep their original order).
+- **In-place sort:** - Sorts using only a constant amount of extra space (O(1) auxiliary space).
+- **Adaptive sort:** - Performs better when the input is already partially (or nearly) sorted.
+- **Comparison-based sort:** - Determines the order of elements by comparing pairs of elements (e.g., quick-sort, merge-sort, heap-sort).
+- **Non-comparison sort:** - Sorts by using element values (or parts of values) directly, without pairwise comparisons (e.g., counting sort, radix sort, bucket sort).
 
-# **Selection Sort:**
- It is a simple comparison-based sorting algorithm> It works by repeatedly by finding the minimum element from the unsorted part of the array and swapping it with the first element of the unsorted part.
- 
-1. **Algorithm Description:**
-	1. Start from the **first element** of the array.
-	2. **Assume the current position has the smallest element**.
-	3. Compare this element with all remaining elements to the right.
-	4. If a **smaller element is found**, update the position of the minimum element.
-	5. After completing comparisons, **swap** the smallest element with the element at the current position.
-	6. Move to the **next position** and repeat the process.
-	7. Continue until the entire array is sorted.
-	
-2. **Time Complexity:**
-	1) Best Case: O(n^2).
-	2) Average Case: O(n^2).
-	3) Worst Case: O(n^2).
-	
-3. **Space Complexity:**
-	Selection sort has a space complexity of O(1) because it is an in-place sorting algorithm.
+# Bubble Sort:
+
+**What it is?**
+Bubble Sort repeatedly scans the array and swaps adjacent elements that are in the wrong order. Each full pass pushes the largest remaining element to its correct position (“bubbles up”) at the end.
+
+**Algorithm (step-by-step):**  
+Given array `A[0..n-1]`:
+1. For `pass = 0` to `n-2`:
+2. For `i = 0` to `n-2-pass`:
+3. If `A[i] > A[i+1]` then swap `A[i]` and `A[i+1]`.
+4. Optionally stop early if a pass makes **no swaps** (optimization).
+
+**Time complexity:**
+- **Best case:** `O(n)` - array already sorted and early-exit optimization used (one pass to confirm).
+- **Average case:** `O(n^2)`.
+- **Worst case:** `O(n^2)` - array in reverse order.
+
+**Space complexity:**
+- Auxiliary: `O(1)` - in-place.
+
+**Other notes:**
+- **Stable:** Yes (preserves relative order of equal elements). 
+- **When to use:** Mostly educational or for tiny arrays; simple and stable but inefficient on large datasets.
+---
+# Insertion Sort:
+
+**What it is?**  
+Insertion Sort builds a sorted section of the array one element at a time. For each element, it inserts that element into the correct place among elements already sorted to its left.
+
+**Algorithm (step-by-step):**  
+Given array `A[0..n-1]`:
+1. For `i = 1` to `n-1`:
+2. `key = A[i]`
+3. `j = i - 1`
+4. While `j >= 0` and `A[j] > key`: set `A[j+1] = A[j]` and `j = j - 1`.
+5. Set `A[j+1] = key`.
+
+**Time complexity:**
+- **Best case:** `O(n)` - array already sorted (only one comparison per element).
+- **Average case:** `O(n^2)`.
+- **Worst case:** `O(n^2)` - array reverse-sorted.
+
+**Space complexity:**
+- Auxiliary: `O(1)` - in-place.
+
+**Other notes:**
+- **Stable:** Yes.
+- **Adaptive:** Yes - performs much better on nearly-sorted inputs (useful in hybrid sorts like `Timsort`).
+- **When to use:** Small or nearly-sorted datasets; as the final pass in hybrid sorts.
+---
+# Selection Sort:
+
+**What it is?**  
+Selection Sort repeatedly selects the minimum element from the unsorted portion and swaps it into the next position of the sorted portion.
+
+**Algorithm (step-by-step):**  
+Given array `A[0..n-1]`:
+1. For `i = 0` to `n-2`:
+2. `minIndex = i`
+3. For `j = i+1` to `n-1`: if `A[j] < A[minIndex]` then `minIndex = j`.
+4. Swap `A[i]` and `A[minIndex]` (if `minIndex != i`).
+
+**Time complexity:**
+- **Best / Average / Worst:** `O(n^2)` - always scans remaining elements to find the minimum.
+
+**Space complexity:**
+- Auxiliary: `O(1)` - in-place.
+
+**Other notes:**
+- **Stable:** Not stable by default (swaps can change relative order of equal elements). Can be made stable with additional cost.
+- **Adaptive:** No - does not benefit from existing order.
+- **When to use:** Rare for large arrays; useful when the number of writes/swaps must be minimized (it does at most `n` swaps).
