@@ -12,6 +12,9 @@ The repository is organized into folders based on topic for better navigation an
 - Stacks.
 - Queues.
 - Binary Tree.
+- Binary Search Tree.
+- AVL Tree.
+- Graphs.
   
 **Each implementation focuses on:**
 - Correct pointer manipulation.
