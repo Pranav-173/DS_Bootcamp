@@ -14,7 +14,8 @@ The repository is organized into folders based on topic for better navigation an
 - Binary Tree.
 - Binary Search Tree.
 - AVL Tree.
-- Graphs.
+- Adjaceny Matrix.
+- Adjacency List.
 
 ## Searching-algorithms:
 **This directory includes Java implementations of common searching techniques:**
