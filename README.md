@@ -12,6 +12,7 @@ The repository is organized into folders based on topic for better navigation an
 - Stacks.
 - Queues.
 - Binary Tree.
+  
 **Each implementation focuses on:**
 - Correct pointer manipulation.
 - Edge case handling.
@@ -23,6 +24,7 @@ The repository is organized into folders based on topic for better navigation an
 - Uniform Binary Search.
 - Fibonacci Search.
 - Interpolation Search.
+  
 The implementations demonstrate how different searching strategies behave under different conditions.
 ## Sorting-algorithms:
 **This directory contains Java implementations of basic sorting algorithms such as:**
@@ -33,6 +35,7 @@ The implementations demonstrate how different searching strategies behave under 
 - Radix Sort.
 - Merge Sort.
 - Shell Sort.
+  
 These programs are written to clearly show algorithm flow and logic rather than micro-optimizations.
 ## Notes:
 **This directory contains Markdown notes created during the bootcamp sessions.**  
