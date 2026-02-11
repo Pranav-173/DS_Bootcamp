@@ -21,6 +21,7 @@ The repository is organized into folders based on topic for better navigation an
   - BFS algorithm.
   - Spanning Tree.
   - Minimum Spanning Tree.
+  - Dijkstra's algorithm.
   - Kruskal's algorithm.
   - Prim's algorithm.
 
@@ -42,8 +43,6 @@ The implementations demonstrate how different searching strategies behave under 
 - Radix Sort.
 - Merge Sort.
 - Shell Sort.
-- Bucket Sort.
-- Optimised bubble Sort.
   
 These programs are written to clearly show algorithm flow and logic rather than micro-optimizations.
 ## Notes:
