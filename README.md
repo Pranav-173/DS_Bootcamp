@@ -42,6 +42,8 @@ The implementations demonstrate how different searching strategies behave under 
 - Radix Sort.
 - Merge Sort.
 - Shell Sort.
+- Bucket Sort.
+- Optimised bubble Sort.
   
 These programs are written to clearly show algorithm flow and logic rather than micro-optimizations.
 ## Notes:
