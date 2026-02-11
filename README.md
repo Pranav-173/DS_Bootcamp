@@ -6,24 +6,21 @@ The implementations prioritize simplicity and correctness over heavy optimizatio
 The repository is organized into folders based on topic for better navigation and clarity.
 ## Data-Structures:
 **This directory contains implementations of fundamental data structures in Java, including:**
-- Linked Lists.
-- Singly Linked Lists.
-- Circular Linked Lists.
-- Stacks.
-- Queues.
-- Binary Tree.
-- Binary Search Tree.
-- AVL Tree.
+- Linked Lists:
+  - Singly Linked Lists.
+  - Circular Linked Lists.
+- Stacks :
+  - Linear Stack. 
+- Queues :
+  - Linear Queue.
+  - Circular Queue. 
+- Trees : 
+  - Binary Tree.
+  - Binary Search Tree.
+  - AVL Tree.
 - Graphs :
   - Adjaceny Matrix.
   - Adjacency List.
-  - DFS algorithm.
-  - BFS algorithm.
-  - Spanning Tree.
-  - Minimum Spanning Tree.
-  - Dijkstra's algorithm.
-  - Kruskal's algorithm.
-  - Prim's algorithm.
 
 ## Searching-algorithms:
 **This directory includes Java implementations of common searching techniques:**
