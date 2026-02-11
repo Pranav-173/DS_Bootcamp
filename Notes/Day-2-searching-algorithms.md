@@ -137,7 +137,7 @@
 		    2. **Average Case:** `O(log n)`.
 		    3. **Worst Case:** `O(log n)`.
 
-**Asymptotic Analysis:**  
+## Asymptotic Analysis:
 As input size grows very large, it becomes impractical to measure an algorithm's exact running time in seconds or steps. Instead we use asymptotic analysis to describe the general trend of an algorithm's performance as input size approaches infinity.
 
 It focuses on dominant factors that influence growth, while ignoring constant multipliers and lower-order terms that have little effect on large inputs.
