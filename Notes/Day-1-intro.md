@@ -14,7 +14,7 @@ It is is a way to organize, store and manage data, so that it can be used effici
 It defines:
 - How data can be stored in memory.
 - How you can access and manipulate it.
-**Basic operations that we can use to perform operations on data structures:** 
+# Basic operations that we can use to perform operations on data structures:
 - **Traversal**: Accessing each element of the data structure.
 - **Searching**: Finding a specific element.
 - **Insertion**: Adding a new element.
