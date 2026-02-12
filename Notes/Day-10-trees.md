@@ -43,7 +43,7 @@
 		It represents a value of a node based on which a search operation is to be carried out for a node.
 
 2. ## Types of Trees:
-	These are three main types of trees:
+	***These are three main types of trees:***
 	1. ### General Trees:
 		They are unordered tree data structures where the root node has minimum 0 or maximum n subtrees. The general trees have no constraint placed on their 				hierarchy. The root node thus acts like the superset of all the other subtrees.
 	2. ### Binary Trees:
