@@ -1,5 +1,5 @@
 # Trees:
-**A Tree is a non linear hierarchical data structure that consists of nodes connected by edges. It is used to represent hierarchical relationships between elements, such as organized structures, file systems, or expression parsing.**
+***A Tree is a non linear hierarchical data structure that consists of nodes connected by edges. It is used to represent hierarchical relationships between elements, such as organized structures, file systems, or expression parsing.***
 
 
 							  _____
