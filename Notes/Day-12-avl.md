@@ -3,11 +3,11 @@
 - Balance Factor = left subtree height - right subtree height  
 - For a Balanced Tree(for every node): -1 ≤ Balance Factor ≤ 1
 ## Example of an AVL Tree:
-The balance factors for different nodes are: 12 : +1, 8 : +1, 18 : +1, 5 : +1, 11 : 0, 17 : 0 and 4 : 0. Since all differences are lies between -1 to +1, so the tree is an AVL tree.
+***The balance factors for different nodes are: 12 : +1, 8 : +1, 18 : +1, 5 : +1, 11 : 0, 17 : 0 and 4 : 0. Since all differences are lies between -1 to +1, so the tree is an AVL tree.***
 
 ![Example-of-an-AVL-Tree-11](https://media.geeksforgeeks.org/wp-content/uploads/20250703161306662411/Example-of-an-AVL-Tree-11.webp "Click to enlarge")
 ### Example of a BST which is not an AVL Tree:
-The Below Tree is **not** an AVL Tree as the balance factor for nodes **8** and **12** is more than ***1***.
+***The Below Tree is **not** an AVL Tree as the balance factor for nodes **8** and **12** is more than ***1***.***
 
 ![Example-of-an-AVL-Tree-22](https://media.geeksforgeeks.org/wp-content/uploads/20250703161407500927/Example-of-an-AVL-Tree-22.webp "Click to enlarge")
 ### Important Points about AVL Tree:
