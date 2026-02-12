@@ -55,10 +55,10 @@ There are 2 major types of data structures, they are:
 ### Static and Dynamic Data Structures:
 Data structures can be categorized based on how memory is allocated and managed during program execution. The two types are:
 
-- **Static Data Structure:**
+- #### Static Data Structure:
 	- Here, memory is allocated at compile time and remains fixed throughout the program's lifecycle. This means the size of the data structure must be known in advance.
 	- **Ex**: Arrays.
-- **Dynamic Data Structure:**
+- #### Dynamic Data Structure:
 	- It allows memory allocation to occur at runtime. They can grow or shrink in size needed, making them more flexible and space efficient.
 	- **Key Characteristics:**
 		- Memory is allocated as needed during execution.
