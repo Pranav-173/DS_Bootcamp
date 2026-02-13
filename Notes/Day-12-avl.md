@@ -60,7 +60,7 @@ AVL tree is a self-balancing Binary Search Tree (***BST***) where the differenc
 - ![right_left_rotation_130.webp](https://media.geeksforgeeks.org/wp-content/uploads/20251209164930323197/right_left_rotation_130.webp)
 # Deletion in an AVL Tree:
 ***Steps to follow for deletion***.   
-To make sure that the given tree remains AVL after every deletion, we must augment the standard BST delete operation to perform some re-balancing. Following are two basic operations that can be performed to re-balance a BST without violating the BST property (keys(left) < key(root) < keys(right)). 
+To make sure that the given tree remains AVL after every deletion, we must augment the standard BST delete operation to perform some re-balancing. Following are two basic operations that can be performed to re-balance a BST without violating the BST property: `(keys(left) < key(root) < keys(right))`. 
 1. Left Rotation.
 2. Right Rotation.
 3. ![Deletion-in-an-AVL-Tree_](https://media.geeksforgeeks.org/wp-content/uploads/20250618171252397002/Deletion-in-an-AVL-Tree_.webp "Click to enlarge")
