@@ -11,7 +11,7 @@ Sorting is a fundamental topic in computer science that arranges the elements of
     Example: If two students have the same marks, a stable sort will keep them in their original relative order.  
     Common stable algorithms: **Bubble Sort**, **Merge Sort**, **Insertion Sort**.
 2. ### In-place sort:
-    A sorting algorithm is _in-place_ if it requires only a constant amount of extra memory beyond the input array (i.e., O(1) auxiliary space).  
+    A sorting algorithm is _in-place_ if it requires only a constant amount of extra memory beyond the input array (i.e., `O(1)` auxiliary space).  
     Common in-place algorithms: **Quick Sort**, **Selection Sort**, **Bubble Sort**.
 3. ### Adaptive sort:
     An _adaptive_ sorting algorithm takes advantage of existing order in the input. The more the input is already sorted, the fewer operations the algorithm needs to perform. Examples of adaptive behavior appear in **Insertion Sort** (fast on nearly-sorted arrays) and some optimized merge or hybrid sorts.
