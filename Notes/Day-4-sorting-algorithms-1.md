@@ -15,7 +15,7 @@ Sorting is a fundamental topic in computer science that arranges the elements of
     Common in-place algorithms: **Quick Sort**, **Selection Sort**, **Bubble Sort**.
 3. ### Adaptive sort:
     An _adaptive_ sorting algorithm takes advantage of existing order in the input. The more the input is already sorted, the fewer operations the algorithm needs to perform. Examples of adaptive behavior appear in **Insertion Sort** (fast on nearly-sorted arrays) and some optimized merge or hybrid sorts.
-    **Examples:** Insertion Sort, `TimSort`, Optimized Bubble Sort.
+    **Examples:** Insertion Sort, TimSort, Optimized Bubble Sort.
 4. ### Comparison-based Sort:
     A sorting algorithm is _comparison-based_ if it determines the order of elements by comparing pairs of elements. Typical examples include **Bubble Sort**, **Merge Sort**, **Quick Sort**, and **Heap Sort**.
 5. ### Non-comparison Sort:
