@@ -21,8 +21,8 @@
 # Hashing:
 - **Hashing is a technique to convert a range of key values into a range of indexes of an array.**
 - We're going to use modulo operator to get a range of key values.
-- Consider an example of hash table of size 20, and the following items are to be stored.
-- Item are in the (key, value) format.
+- Consider an example of hash table of size `20`, and the following items are to be stored.
+- Item are in the `(key, value)` format.
 ## Types of Hash functions:
 There are mainly hash functions that use numeric or alphanumeric keys.
 **The different types of hashing functions are:**
@@ -42,8 +42,8 @@ There are mainly two methods to handle collision:
 - The idea behind Separate Chaining is to make each cell of the hash table point to a linked list of records that have the same hash function value. Chaining is simple but requires additional memory outside the table.
 - ***Example***: We have given a hash function and we have to insert some elements in the hash table using a separate chaining method for collision resolution technique.
 
-> Hash function = key % 5,  
-> Elements = 12, 15, 22, 25 and 37.
+> `Hash function = key % 5`,  
+> `Elements = 12, 15, 22, 25 and 37`.
 
 **Let's see step by step approach to how to solve the above problem:**
 - ![Separate-Chaining-1.webp](https://media.geeksforgeeks.org/wp-content/uploads/20241220122112343763/Separate-Chaining-1.webp "Click to enlarge")
