@@ -19,7 +19,7 @@
 	2. **Extra memory:** For storing sequences.
 
 4. ### Basic Operations:
-	1. **Insertion:** At the beginning, the end, or a given position.
-	2. **Deletion:** From the beginning, the end, or a given position.
-	3. **Traversal:** Visiting each node to display or process data.
-	4. **Search:** To find an element in the list.
+	1. **`Insertion`:** At the beginning, the end, or a given position.
+	2. **`Deletion`:** From the beginning, the end, or a given position.
+	3. **`Traversal`:** Visiting each node to display or process data.
+	4. **`Search`:** To find an element in the list.
