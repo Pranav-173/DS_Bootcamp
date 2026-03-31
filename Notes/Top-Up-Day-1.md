@@ -59,6 +59,7 @@ So the final prefix is:
 | e      | - /   | abc*+de  |
 | ^      | - / ^ | abc*+de  |
 | f      | - / ^ | abc*+def |
+
 **Pop remaining stack:**
 - Pop `^`, `/`, `-`
 - Postfix: `abc*+def^/-`
