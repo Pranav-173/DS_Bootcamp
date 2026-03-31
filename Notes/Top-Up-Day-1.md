@@ -38,7 +38,7 @@ For stack-based expression evaluation, precedence and associativity are used to 
     - main operator: `-`
 So the final prefix is:
 `- + a * b c / d ^ e f`
-### Using Stack:
+# Using Stack:
 ## Infix to prefix (using stack) for: `f^e/d-c*b+a`:
 - **Given Infix:** `f ^ e / d - c * b + a`
 - **Reverse the expression:** `a + b * c - d / e ^ f`
