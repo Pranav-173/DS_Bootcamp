@@ -22,35 +22,35 @@ class Queue{
     }
     public void enqueue(int item){
         if(isFull()){
-            System.out.println("Queue is full. Can't enqueue "+ item);
+            System.out.println("Queue is Full. Can't Enqueue " + item);
             return;
         }
         arr[++rear] = item;
         count++;
-        System.out.println(item +" enqueued to queue.");
+        System.out.println(item + " Enqueued to Queue.");
     }
     public void dequeue(){
         if(isEmpty()){
-            System.out.println("Queue is empty.Can't dequeue.");
+            System.out.println("Queue is Empty. Can't Dequeue.");
             return;
         }
         int item = arr[front++];
         count--;
-        System.out.println(item +" dequeued from queue.");
+        System.out.println(item + " Dequeued from Queue.");
     }
     public void peek(){
         if(isEmpty()){
-            System.out.println("Queue is empty.");
+            System.out.println("The Queue is Empty.");
             return;
         }
-        System.out.println("Front element is : "+ arr[front]);
+        System.out.println("Front element is: "+ arr[front]);
     }
     public void display(){
         if(isEmpty()){
-            System.out.println("Queue is empty.");
+            System.out.println("The Queue is Empty.");
             return;
         }
-        System.out.println("Queue Elements : ");
+        System.out.println("Queue Elements: ");
         for (int i = front; i <= rear; i++) {
         System.out.print(arr[i] + " ");
         System.out.println();
@@ -64,7 +64,7 @@ class Queue{
     }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter queue size : ");
+        System.out.println("Enter Queue size: ");
         int capacity = sc.nextInt();
         Queue queue = new Queue(capacity);
         int choice;
@@ -72,16 +72,16 @@ class Queue{
             System.out.println("\n--- Queue Operations ---");
             System.out.println("1. Enqueue");
 			System.out.println("2. Dequeue");
-			System.out.println("3. peek");
+			System.out.println("3. Peek");
 			System.out.println("4. Display");
-            System.out.println("5. Is full");
-            System.out.println("6. Is empty");
+            System.out.println("5. Is Full?");
+            System.out.println("6. Is Empty?");
             System.out.println("7. Exit");
 			System.out.print("Enter your choice: ");
 			choice = sc.nextInt();
             switch(choice){
                 case 1:
-                    System.out.println("Enter element to enqueue : ");
+                    System.out.println("Enter element to Enqueue: ");
                     int element = sc.nextInt();
                     queue.enqueue(element);
                     break;
@@ -95,13 +95,13 @@ class Queue{
                     queue.display();
                     break;
                 case 5:
-                    System.out.println(queue.isFull() ? "The queue is full." : "The queue is not full.");
+                    System.out.println(queue.isFull() ? "The Queue is Full." : "The Queue is NOT Full.");
                     break;
                 case 6:
-                    System.out.println(queue.isEmpty() ? "The queue is empty." : "The queue is not empty.");
+                    System.out.println(queue.isEmpty() ? "The Queue is Empty." : "The Queue is NOT Empty.");
                     break;            
                 case 7:
-                    System.out.println("Exititng .....");
+                    System.out.println("Exititng...");
                     break;
                 default:
                     System.out.println("Invalid choice!");
