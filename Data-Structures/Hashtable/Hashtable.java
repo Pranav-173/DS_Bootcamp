@@ -1,29 +1,30 @@
 import java.util.Scanner;
-public class Hashtable{
+
+public class Hashtable {
     static int size;
     static Dataitem[] hasharray;
-    static class Dataitem{
+    static class Dataitem {
         int data;
         int key;
-        Dataitem(int data, int key){
+        Dataitem(int data, int key) {
             this.data = data;
             this.key = key;
         }
     }
-    static void initialise(){
+    static void initialise() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of the hash table : ");
+        System.out.println("Enter the size of the Hash Table: ");
         size = sc.nextInt();
         hasharray = new Dataitem[size];
     }
-    static int hashcode(int key){
+    static int hashcode(int key) {
         return key % size;
     }
-    static void insert(int key,int data){
-        Dataitem item = new Dataitem(data,key);
+    static void insert(int key,int data) {
+        Dataitem item = new Dataitem(data, key);
         int hashindex = hashcode(key);
-        while(hasharray[hashindex] != null && hasharray[hashindex].key != -1){
-            hashindex = (hashindex + 1)% size;
+        while (hasharray[hashindex] != null && hasharray[hashindex].key != -1) {
+            hashindex = (hashindex + 1) % size;
         }
         hasharray[hashindex] = item;
     }
@@ -50,19 +51,19 @@ public class Hashtable{
             }
         }
     }
-    public static void main(String[] args){
+    public static void main(String[] args) {
         initialise();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of insertions : ");
+        System.out.println("Enter the number of Insertions: ");
         int n = sc.nextInt();
-        for(int i =0 ; i < n; i++ ){
-            System.out.println("Enter the index : ");
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter the index: ");
             int index = sc.nextInt();
-            System.out.println("Enter the element : ");
+            System.out.println("Enter the element: ");
             int element = sc.nextInt();
-            insert(index,element);
+            insert(index, element);
         }
-        System.out.println("Insertion done !");
+        System.out.println("Insertion done!");
         System.out.println();
         display();
     }
