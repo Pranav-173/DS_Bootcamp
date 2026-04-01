@@ -1,40 +1,12 @@
 import java.util.Scanner;
-public class DS_stack {
-	static int MAX_SIZE = 100;
-	static int[] stack = new int[MAX_SIZE];
-	static int top = -1;
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int choice;
-		do {
-			System.out.println("\n--- Stack Operations ---");
-			System.out.println("1. Push");
-			System.out.println("2. Pop");
-			System.out.println("3. Display");
-			System.out.println("4. Exit");
-			System.out.print("Enter your choice: ");
-			choice = sc.nextInt();
-			switch (choice) {
-				case 1:
-					System.out.print("Enter value to push: ");
-					int value = sc.nextInt();
-					push(value);
-					break;
-				case 2:
-					pop();
-					break;
-				case 3:
-					display();
-					break;
-				case 4:
-					System.out.println("Exiting...");
-					break;
-				default:
-					System.out.println("Invalid choice!");
-			}
-		} 
-        while (choice != 4);
-		sc.close();
+class Stack {
+	static int MAX_SIZE;
+	static int[] stack;
+	static int top;
+	public Stack(int x){
+		MAX_SIZE = x;
+		stack = new int[MAX_SIZE];
+		top = -1;
 	}
 	static boolean isFull() {
 		return top == MAX_SIZE - 1;
@@ -68,5 +40,35 @@ public class DS_stack {
 			System.out.print(stack[i] + " ");
 		}
 		System.out.println();
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the stack size: ");
+		int size = sc.nextInt();
+		Stack stack = new Stack(size);
+		while(true){
+			System.out.println("***** Stack Operations *****");
+			System.out.println("1. Push\n2. Pop\n3. Display\n4. Exit");
+			System.out.println("Enter your choice: ");
+			int choice = sc.nextInt();
+			switch (choice) {
+				case 1:
+					System.out.print("Enter value to push: ");
+					int value = sc.nextInt();
+					stack.push(value);
+					break;
+				case 2:
+					stack.pop();
+					break;
+				case 3:
+					stack.display();
+					break;
+				case 4:
+					System.out.println("Exiting...");
+					return;
+				default:
+					System.out.println("Invalid choice!");
+			}
+		}
 	}
 }
