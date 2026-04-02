@@ -16,7 +16,7 @@ public class DS_Binarysearch {
         int key = sc.nextInt();
         int result = binarysearch(arr, key);
         if (result != -1) {
-            System.out.println("Element " + key + " Found at Index : " + result);
+            System.out.println("Element " + key + " Found at Index: " + result);
         } else {
             System.out.println("Element " + key + " was NOT Found in the entered Array.");
         }
