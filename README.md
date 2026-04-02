@@ -1,4 +1,4 @@
-# `DS_Bootcamp`
+# `DSA`
 This repository contains Java implementations of **Data Structures and Algorithms** developed during a Data Structures Bootcamp.  
 It is designed to help understand core concepts through clean, readable, and beginner-friendly code.
 The implementations prioritize simplicity and correctness over heavy optimization, making them suitable for learning, revision, and interview preparation.
