@@ -48,7 +48,7 @@ class Stack {
 		int size = sc.nextInt();
 		Stack stack = new Stack(size);
 		while (true) {
-			System.out.println("***** Stack Operations *****");
+			System.out.println("***Stack Operations***");
 			System.out.println("1. Push\n2. Pop\n3. Display\n4. Exit");
 			System.out.println("Enter your choice: ");
 			int choice = sc.nextInt();
