@@ -1,5 +1,6 @@
 import java.util.*;
-public class Main{
+
+public class Main {
     class Node {
         int data;
         int height;
@@ -10,9 +11,9 @@ public class Main{
             height = 1;
         }
     }
-    static class AVL{
+    static class AVL {
         Node root;
-        // ---------- UTILITIES ----------
+        //----UTILITIES----
         int height(Node n) {
             return n == null ? 0 : n.height;
         }
@@ -22,7 +23,7 @@ public class Main{
         void updateHeight(Node n) {
             n.height = 1 + Math.max(height(n.left), height(n.right));
         }
-        // ---------- ROTATIONS ----------
+        //----ROTATIONS----
         Node rightRotate(Node y) {
             Node x = y.left;
             Node t2 = x.right;
@@ -41,7 +42,7 @@ public class Main{
             updateHeight(y);
             return y;
         }
-        // ---------- INSERT (ITERATIVE) ----------
+        //----INSERT (ITERATIVE)----
         public void insert(int key) {
             if (root == null) {
                 root = new Node(key);
@@ -69,7 +70,7 @@ public class Main{
             }
             rebalance(stack);
         }
-        // ---------- DELETE (ITERATIVE) ----------
+        //----DELETE (ITERATIVE)----
         public void delete(int key) {
             if (root == null) return;
             Stack<Node> stack = new Stack<>();
@@ -103,7 +104,7 @@ public class Main{
 
             rebalance(stack);
         }
-        // ---------- REBALANCE ----------
+        //----REBALANCE----
         void rebalance(Stack<Node> stack) {
             while (!stack.isEmpty()) {
                 Node node = stack.pop();
@@ -130,12 +131,11 @@ public class Main{
                 }
             }
         }
-        // ---------- TRAVERSALS ----------
+        //----TRAVERSALS----
         public void inorder() {
             inorder(root);
             System.out.println();
         }
-
         void inorder(Node n) {
             if (n == null) return;
             inorder(n.left);
@@ -160,10 +160,10 @@ public class Main{
         AVL tree = new AVL();
         int ch;
         do {
-            System.out.println("\n----- AVL Search Tree Operations Menu -----");
-            System.out.println("1. Insert ");
-            System.out.println("2. Delete ");
-            System.out.println("3. Inorder ");
+            System.out.println("\n---AVL Search Tree Operations Menu---");
+            System.out.println("1. Insert");
+            System.out.println("2. Delete");
+            System.out.println("3. Inorder");
             System.out.println("4. LevelOrder");
             System.out.println("5. Exit");
             System.out.print("Choice: ");
