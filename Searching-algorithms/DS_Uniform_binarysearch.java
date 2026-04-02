@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class DS_Uniform_binarysearch {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the length of the array: ");
+        System.out.println("Enter the length of the Array: ");
         int size = sc.nextInt();
         System.out.println("Enter array elements: ");
         int arr[] = new int[size];
