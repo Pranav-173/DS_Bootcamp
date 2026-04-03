@@ -57,7 +57,7 @@ public class Hashtable {
         System.out.println("Enter the number of Insertions: ");
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
-            System.out.println("Enter the index: ");
+            System.out.println("Enter the Index: ");
             int index = sc.nextInt();
             System.out.println("Enter the element: ");
             int element = sc.nextInt();
