@@ -297,7 +297,7 @@ public class Main {
                     System.out.println(tree.levelOrder());
                     break;
                 case 8:
-                    System.out.println("Minimun element: ");
+                    System.out.println("Minimum element: ");
                     System.out.println(tree.findMin());
                     break;
                 case 9:
@@ -305,10 +305,12 @@ public class Main {
                     System.out.println(tree.findMax());
                     break;
                 case 10:
+                    System.out.println("Enter the element: ");
                     int v10 = sc.nextInt();
                     System.out.println(tree.successor(v10));
                     break;
                 case 11:
+                    System.out.println("Enter the element: ");
                     int v11 = sc.nextInt();
                     System.out.println(tree.predecessor(v11));
                     break;
