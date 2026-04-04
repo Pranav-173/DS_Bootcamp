@@ -220,17 +220,17 @@ public class Main {
 
             switch (ch) {
                 case 1 -> {
-                    System.out.print("Enter value to insert: ");
+                    System.out.print("Enter value to Insert: ");
                     tree.insert(sc.nextInt());
                 }
                 case 2 -> {
-                    System.out.print("Enter value to delete: ");
+                    System.out.print("Enter value to Delete: ");
                     tree.delete(sc.nextInt());
                 }
                 case 3 -> tree.inorder();
                 case 4 -> tree.levelOrder();
                 case 5 -> System.out.println("Exiting...");
-                default -> System.out.println("Invalid choice");
+                default -> System.out.println("Invalid choice!");
             }
         } while (ch != 5);
 
