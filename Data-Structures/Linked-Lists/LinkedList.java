@@ -8,7 +8,7 @@ class Node {
         this.next = null;
     }
 }
-class Singlylinkedlist {
+class SinglyLinkedList {
     private Node head;
     //----Insert At Beginning----
     public void insertAtBeginning(int data) {
@@ -125,13 +125,13 @@ class Singlylinkedlist {
         System.out.println("null");
     }
 }
-public class LinkedLists {
+public class LinkedList {
     public static void main(String[] args) {
-        Singlylinkedlist list = new Singlylinkedlist();
+        SinglyLinkedList list = new SinglyLinkedList();
         Scanner sc = new Scanner(System.in);
         int choice, data, position;
         do {
-            System.out.println("\n---Linked List Operations Menu---");
+            System.out.println("\n--- Linked List Operations Menu ---");
             System.out.println("1. Insert at Beginning");
             System.out.println("2. Insert at End");
             System.out.println("3. Insert at Position");
