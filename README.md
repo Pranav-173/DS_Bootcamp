@@ -21,7 +21,7 @@ The repository is organized into folders based on topic for better navigation an
   - Binary Search Tree.
   - AVL Tree.
 - Graphs :
-  - Adjaceny Matrix.
+  - Adjacency Matrix.
   - Adjacency List.
   - BFS algorithm.
   - DFS algorithm.
