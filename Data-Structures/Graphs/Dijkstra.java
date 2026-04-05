@@ -2,17 +2,13 @@ import java.util.*;
 
 public class Dijkstra {
 
-    /**
-     * Adds an undirected weighted edge between u and v.
-     */
+    // Adds an undirected weighted edge between u and v.
     static void addUndirectedEdge(ArrayList<ArrayList<int[]>> adj, int u, int v, int w) {
         adj.get(u).add(new int[]{v, w});
         adj.get(v).add(new int[]{u, w});
     }
 
-    /**
-     * Adds a directed weighted edge from u to v.
-     */
+    // Adds a directed weighted edge from u to v.
     static void addDirectedEdge(ArrayList<ArrayList<int[]>> adj, int u, int v, int w) {
         adj.get(u).add(new int[]{v, w});
     }
@@ -55,7 +51,7 @@ public class Dijkstra {
             adj.add(new ArrayList<>());
         }
 
-        // Example graph is undirected.
+        // Example below uses an undirected graph.
         addUndirectedEdge(adj, 0, 1, 2);
         addUndirectedEdge(adj, 0, 2, 4);
         addUndirectedEdge(adj, 1, 2, 1);
