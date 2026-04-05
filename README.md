@@ -74,9 +74,9 @@ These programs are written to clearly show algorithm flow and logic rather than 
    git clone https://github.com/Nullkernel/DSA.git
    ```
 
-2. **Run a Java compile smoke test (recommended):**
-   ```bash
-   ./scripts/java_compile_smoke_test.sh
-   ```
 
-This checks that each Java source file compiles and helps catch syntax or class-name/file-name issues early.
+## Development Checks
+- Run a Java compile smoke test:
+  ```bash
+  ./scripts/java-compile-smoke.sh
+  ```

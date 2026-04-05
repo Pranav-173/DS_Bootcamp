@@ -15,16 +15,16 @@ public class Fibonaccisearch {
         }
 
         Arrays.sort(arr);
-        System.out.println("Sorted array: " + Arrays.toString(arr));
+        System.out.println("Sorted Array: " + Arrays.toString(arr));
 
-        System.out.println("Enter the key element to be found: ");
+        System.out.println("Enter the key element to be Found: ");
         int key = sc.nextInt();
 
         int result = fibonacciSearch(arr, key);
         if (result != -1) {
-            System.out.println("Element " + key + " found at index: " + result);
+            System.out.println("Element " + key + " Found at Index: " + result);
         } else {
-            System.out.println("Element " + key + " was NOT found in the array.");
+            System.out.println("Element " + key + " was NOT Found in the entered Array.");
         }
 
         sc.close();
@@ -32,10 +32,9 @@ public class Fibonaccisearch {
 
     public static int fibonacciSearch(int[] arr, int key) {
         int n = arr.length;
-
-        int fibMm2 = 0;
-        int fibMm1 = 1;
-        int fibM = fibMm1 + fibMm2;
+        int fibMm2 = 0; // (m-2)th Fibonacci number
+        int fibMm1 = 1; // (m-1)th Fibonacci number
+        int fibM = fibMm1 + fibMm2; // mth Fibonacci number
 
         while (fibM < n) {
             fibMm2 = fibMm1;

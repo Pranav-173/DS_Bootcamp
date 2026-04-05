@@ -27,9 +27,7 @@ public class Dijkstra {
             long d = top[0];
             int u = (int) top[1];
 
-            if (d > dist[u]) {
-                continue;
-            }
+            if (d > dist[u]) continue;
 
             for (int[] edge : adj.get(u)) {
                 int v = edge[0];
