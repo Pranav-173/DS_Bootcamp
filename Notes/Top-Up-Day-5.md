@@ -18,6 +18,11 @@ Hash stores the data in an associative manner in an array where each data value 
 ### **Hash functions:** 
 There are many hash functions that use numeric or alphanumeric keys. Different hash functions are:
 - Division method
-- Mid square method
+- **Mid square method:**
+  Example:
+  K = 50
+  k 8 k = 2500
+  h(k) = 50
+  The hash value obtained is 50
 - Folding method
 - Multiplication method
