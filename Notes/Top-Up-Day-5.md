@@ -30,7 +30,7 @@ There are various hash functions that work with numeric or alphanumeric keys:
 
 ---
 
-### Division Method
+#### 1. Division Method
 
 **Concept:**
 
@@ -46,7 +46,7 @@ Where:
 * `m` = size of hash table
 ---
 
-### Mid-Square Method
+#### 2. Mid-Square Method
 
 **Concept:**
 Square the key and extract the middle digits.
@@ -61,7 +61,7 @@ h(k) = 50
 ```
 ---
 
-### Folding Method
+#### 3. Folding Method
 
 **Concept:**
 The folding method involves dividing the key into equal parts, summing the parts and then taking the modulo with respect to m.
@@ -87,7 +87,7 @@ The key `123456789` is stored at index **8**.
 
 ---
 
-### Multiplication Method
+#### 4. Multiplication Method
 
 **Formula:**
 
@@ -113,4 +113,5 @@ The hash function used for multiplication method is: h(k) = floor ( n (K A % 1) 
 ---
 
 ## Collision
+
 
