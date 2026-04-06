@@ -18,15 +18,19 @@ Hash stores the data in an associative manner in an array where each data value 
 ### **Hash functions:** 
 There are many hash functions that use numeric or alphanumeric keys. Different hash functions are:
 - **Division method:**
-
   
     <img width="530" height="244" alt="image" src="https://github.com/user-attachments/assets/57bf9d14-bd95-4cc0-b16a-cef3de540345" />
 
 - **Mid square method:**
-    Example:\n
-    K = 50\n
-    k*8 k = 2500\n
-    h(k) = 50\n
+    Example:
+    K = 50
+    k*8 k = 2500
+    h(k) = 50
     The hash value obtained is 50
-- Folding method
-- Multiplication method
+- **Folding method:**
+    The folding method involves dividing the key into equal parts, summing the parts and then taking the modulo with respect to m.
+    Steps:
+      - Divide the key into parts.
+      - Sum the parts
+      - Take the modulo m of the sum
+- **Multiplication method:**
