@@ -34,7 +34,7 @@ There are various hash functions that work with numeric or alphanumeric keys:
 
 **Concept:**
 
-<img width="530" height="244" alt="image" src="https://github.com/user-attachments/assets/57bf9d14-bd95-4cc0-b16a-cef3de540345" />
+<img width="530" height="260" alt="image" src="https://github.com/user-attachments/assets/57bf9d14-bd95-4cc0-b16a-cef3de540345" />
 
 Uses modulo operation:
 
@@ -99,7 +99,7 @@ Where:
 
 * `k` = key
 * `m` = size of hash table
-* `A` = constant (0 < A < 1), commonly `0.618`
+* `A` = constant (0 < A < 1)
 
 **Concept:**
 
@@ -111,3 +111,6 @@ The hash function used for multiplication method is: h(k) = floor ( n (K A % 1) 
 4. Take the floor value
 
 ---
+
+## Collision
+
