@@ -9,30 +9,36 @@ The repository is organized into folders based on topic for better navigation an
 ## Data-Structures:
 **This directory contains implementations of fundamental data structures in Java, including:**
 
-- `Data-Structures/Linked-Lists/LinkedList.java` — Singly Linked List.
-- `Data-Structures/Linked-Lists/CircularLinkedLists.java` — Circular Linked List.
-- `Data-Structures/Linked-Lists/DoubleLinkedList.java` — Doubly Linked List.
-- `Data-Structures/Stack/Stack.java` — Linear Stack.
-- `Data-Structures/Queue/Queue.java` — Linear Queue.
-- `Data-Structures/Queue/CircularQueue.java` — Circular Queue.
-- `Data-Structures/Queue/BoundedQueue.java` — Bounded Queue.
-- `Data-Structures/Queue/PriorityQueue.java` — Priority Queue.
-- `Data-Structures/Trees/BinaryTree.java` — Binary Tree (manual traversal demo).
-- `Data-Structures/Trees/BinaryTreeImplementation.java` — Binary Tree with insert/search/delete.
-- `Data-Structures/Trees/BinarySearchTree.java` — Binary Search Tree.
-- `Data-Structures/Trees/AVLTree.java` — AVL Tree.
-- `Data-Structures/Graphs/AdjacencyMatrix.java` — Graph (Adjacency Matrix).
-- `Data-Structures/Graphs/AdjacencyList.java` — Graph (Adjacency List).
-- `Data-Structures/Graphs/BFS.java` — Breadth-First Search (BFS).
-- `Data-Structures/Graphs/DFS.java` — Depth-First Search (DFS).
-- `Data-Structures/Graphs/Dijkstra.java` — Dijkstra's algorithm.
-- `Data-Structures/Hashing/HashTable.java` — Hash Table.
-
-### Additional/Optional Implementations
-- `Data-Structures/Trees/Trie/Trie.java` — Trie.
-- `Data-Structures/Trees/Trie/PrefixTrie.java` — Prefix Trie.
-- `Data-Structures/Trees/Trie/SuffixTrie.java` — Suffix Trie.
-
+- Graphs:
+    - Graph (Adjacency List).
+    - Graph (Adjacency Matrix).
+    - Breadth-First Search (BFS).
+    - Depth-First Search (DFS).
+    - Dijkstra's algorithm.
+- Hashing:
+    - Hash Table.
+- Linked List:
+    - Circular Linked List. 
+    - Doubly Linked List.
+    - Singly Linked List.
+- Queue:
+    - Bounded Queue.
+    - Circular Queue.
+    - Priority Queue.
+    - Linear Queue.
+-Stack:
+    - Linear Stack.
+- Trees:
+    - Trie:
+        - Prefix Array.
+        - Prefix Trie.
+        - Suffix Array.
+        - Suffix Trie.
+        - Trie.
+    - AVL Tree.
+    - Binary Search Tree.
+    - Binary Tree (manual traversal demo).
+    - Binary Tree with insert/search/delete.
 
 ## Searching-algorithms:
 **This directory includes Java implementations of common searching techniques:**
