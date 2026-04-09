@@ -2,7 +2,7 @@ public class AdjacencyMatrix {
     private static void validateVertex(int[][] mat, int vertex, String name) {
         if (vertex < 0 || vertex >= mat.length) {
             throw new IllegalArgumentException(
-                name + " index out of bounds: " + vertex + ". Valid range is 0 to " + (mat.length - 1)
+                name + " Index out of bounds: " + vertex + ". Valid range is 0 to " + (mat.length - 1)
             );
         }
     }
